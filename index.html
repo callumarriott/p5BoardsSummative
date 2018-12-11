@@ -6,16 +6,16 @@
 		<script>
 			function setup(){
 				createCanvas(640, 480);
-				rectMode(CENTER);
-				fill(20);
-				stroke(255, 251, 249);
-				strokeWeight(4);
 			}
 			
 			class Boards{
 				constructor(width, height){
 					this.width = width;
 					this.height = height;
+					rectMode(CENTER);
+					fill(20);
+					stroke(255, 251, 249);
+					strokeWeight(4);
 				}
 				
 				draw(){
@@ -27,7 +27,8 @@
 					var intervalY = map(mouseY, 0, this.width, 20, -40);
 					var rectX = 100;
 					var rectY = 200;
-					var tilt = map(mouseX, 0, this.width, -20, 20);
+					<!-- var tilt = map(mouseX, 0, this.width, -20, 20); -->
+					var tilt = 20 * sin(2 * atan((this.height - 2 * mouseY) / (this.width - 2 * mouseX)));
 					for(var i = num - 1; i > 0; i--){
 						push();
 						var rhytm = map(pow(abs(sin(frameCount * 0.03 - i * 0.3)), 50), 0, 1, 0, -50)
