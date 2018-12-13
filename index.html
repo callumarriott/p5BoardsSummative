@@ -9,14 +9,15 @@
 			}
 			
 			class Boards {
-				constructor(width, height, depth, opacity) {
+				constructor(width, height, rectX, rectY, depth, opacity) {
 					this.width = width;
 					this.height = height;
+					this.rectX = rectX;
+					this.rectY = rectY;
 					rectMode(CENTER);
 					fill(opacity);
 					stroke(255, 251, 249);
 					strokeWeight(depth);
-					background(255, 251, 249);
 				}
 				
 				draw() {
@@ -24,8 +25,6 @@
 					var num = 10;
 					var intervalX = map(mouseX, 0, this.width, 40, -40);
 					var intervalY = map(mouseY, 0, this.width, 20, -40);
-					var rectX = 100;
-					var rectY = 200;
 					var tilt = 20 * sin(2 * atan((this.height - 2 * mouseY) / (this.width - 2 * mouseX)));
 					for (var i = num - 1; i > 0; i--) {
 						push();
@@ -33,10 +32,10 @@
 							* map(abs(mouseX - this.width / 2), 0, this.width / 2, 0, 1);
 						translate(intervalX * (i - num / 2.0), intervalY * (i - num / 2.0) + rhytm);
 						beginShape();
-						vertex(-rectX / 2.0, -rectY / 2.0 + tilt);
-						vertex(rectX / 2.0, -rectY / 2.0 - tilt);
-						vertex(rectX / 2.0, rectY / 2.0 - tilt);
-						vertex(-rectX / 2.0, rectY / 2.0 + tilt);
+						vertex(-this.rectX / 2.0, -this.rectY / 2.0 + tilt);
+						vertex(this.rectX / 2.0, -this.rectY / 2.0 - tilt);
+						vertex(this.rectX / 2.0, this.rectY / 2.0 - tilt);
+						vertex(-this.rectX / 2.0, this.rectY / 2.0 + tilt);
 						endShape(CLOSE);
 						pop();
 					}
@@ -44,7 +43,8 @@
 			}
 			
 			function draw() {
-				let b = new Boards(640, 480, 4, 20);
+				background(255, 251, 249);
+				let b = new Boards(640, 480, 100, 200, 4, 20);
 				b.draw();
 			}
 		</script>
