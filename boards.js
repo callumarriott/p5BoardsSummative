@@ -4,8 +4,9 @@ class Boards {
 		this.yPosition = yPosition * 2 || 480;
 		this.rectX = rectX || 100;
 		this.rectY = rectY || 200;
-		strokeWeight(depth || 4);
-		fill(colour || 'black');
+		this.depth = depth || 4;
+		this.colour = colour || 'black';
+		fill(this.colour);
 		rectMode(CENTER);
 		stroke(255, 251, 249);
 	}
@@ -35,6 +36,8 @@ class Boards {
 	}
 	
 	draw() {
+		strokeWeight(this.depth);
+		fill(this.colour);
 		translate(this.xPosition / 2, this.yPosition / 2);
 		var num = 10;
 		var intervalX = map(mouseX, 0, this.xPosition, 40, -40);
