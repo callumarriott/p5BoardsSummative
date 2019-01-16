@@ -5,7 +5,7 @@ class Boards {
 		this.rectX = rectX || 100;
 		this.rectY = rectY || 200;
 		this.depth = depth || 4;
-		this.colour = colour || 'black';
+		this.colour = colour || "black";
 		rectMode(CENTER);
 		stroke(255);
 	}

@@ -1,4 +1,4 @@
-var b
+var b;
 
 function setup() {
 	createCanvas(640, 480);
@@ -12,30 +12,30 @@ function draw() {
 
 document.addEventListener("DOMContentLoaded", function() {
 	
-    function changeXPosition(event) {
+	function changeXPosition(event) {
 		let xPosition = document.getElementById("xPosition").value;
 		b.setXPosition(xPosition);
-    }
+	}
 	
 	function changeYPosition(event) {
 		let yPosition = document.getElementById("yPosition").value;
 		b.setYPosition(yPosition);
-    }
+	}
 	
 	function changeRectX(event) {
 		let rectX = document.getElementById("rectX").value;
 		b.setRectX(rectX);
-    }
+	}
 	
 	function changeRectY(event) {
 		let rectY = document.getElementById("rectY").value;
 		b.setRectY(rectY);
-    }
+	}
 	
 	function changeDepth(event) {
 		let depth = document.getElementById("depth").value;
 		b.setDepth(depth);
-    }
+	}
 	
 	function changeColour(event) {
 		let colour = document.getElementById("colour").value;
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 	var bf = document.getElementById("boards_form");
 
-    bf.addEventListener("submit", function (event){
-		event.preventDefault()
+	bf.addEventListener("submit", function (event){
+		event.preventDefault();
 	});
 });
