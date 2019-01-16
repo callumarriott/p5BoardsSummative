@@ -6,9 +6,8 @@ class Boards {
 		this.rectY = rectY || 200;
 		this.depth = depth || 4;
 		this.colour = colour || 'black';
-		fill(this.colour);
 		rectMode(CENTER);
-		stroke(255, 251, 249);
+		stroke(255);
 	}
 	
 	setXPosition(xPosition) {
