@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
+		<div style="padding-top:20px">
+		</div>
 		<div style="padding-left:10px">
 			<form id="boards_form">
 				<div class="row">
@@ -19,7 +21,11 @@
 						<label for="yPosition">yPosition:</label>
 						<input type="range" min="1" max="960" value="480" id="yPosition"/>
 					</div>
+					<div class="col-md-4">
+						<label>Change these to alter the sketch's x and y coordinates</label>
+					</div>
 				</div>
+				<hr>
 				<div class="row">
 					<div class="col-md-2">
 						<label for="rectX">rectX:</label>
@@ -29,20 +35,32 @@
 						<label for="rectY">rectY:</label>
 						<input type="range" min="1" max="400" value="200" id="rectY"/>
 					</div>
+					<div class="col-md-4">
+						<label>Change this to alter size of the rectangles</label>
+					</div>
 				</div>
+				<hr>
 				<div class="row">
 					<div class="col-md-2">
 						<label for="depth">depth:</label>
 						<input type="range" min="1" max="8" value="4" id="depth"/>
 					</div>
+					<div class="col-md-4">
+						<label>Change this to alter the size of the border around the rectangles</label>
+					</div>
 				</div>
+				<hr>
 				<div class="row">
 					<div class="col-md-2">
 						<label for="colour">colour:</label>
 						<input type="color" id="colour"/>
 					</div>
+					<div class="col-md-4">
+						<label>Select a colour to alter the colour of the boards</label>
+					</div>
 				</div>
 			</form>
+			<hr>
 		</div>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
