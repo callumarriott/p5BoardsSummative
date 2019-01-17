@@ -4,6 +4,7 @@
 * A class that creates ten 'boards' in a given position. The boards are layered on top of each other when the mouse is directly on top of them and extend towards the mouse 
 as the mouse moves around the sketch. The boards also perform a small animation where they individually move up and down one after the other. The height of this animation is changed 
 depending on the x-coordinate of the mouse (the further away from the x-coordinate of the middle 'board', the larger the animation). 
+### Fields and Methods
 * **Constructor()**: 
 	* **xPosition**: The x-coordinate of the middle rectangle of the sketch. 
 	* **yPosition**: The y-coordinate of the middle rectangle of the sketch. 
