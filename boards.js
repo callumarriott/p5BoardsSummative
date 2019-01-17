@@ -14,24 +14,48 @@ class Boards {
 		this.xPosition = xPosition;
 	}
 	
+	getXPosition() {
+		return this.xPosition;
+	}
+	
 	setYPosition(yPosition) {
 		this.yPosition = yPosition;
+	}
+	
+	getYPosition() {
+		return this.yPosition;
 	}
 	
 	setRectX(rectX) {
 		this.rectX = rectX;
 	}
 	
+	getRectX() {
+		return this.rectX;
+	}
+	
 	setRectY(rectY) {
 		this.rectY = rectY;
+	}
+	
+	getRectY() {
+		return this.rectY;
 	}
 	
 	setDepth(depth) {
 		this.depth = depth;
 	}
 	
+	getDepth() {
+		return this.depth;
+	}
+	
 	setColour(colour) {
 		this.colour = colour;
+	}
+	
+	getColour() {
+		return this.colour;
 	}
 	
 	draw() {
